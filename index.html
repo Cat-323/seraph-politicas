@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidad — Seraph Bot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090a10;
+      --card-bg: rgba(18, 19, 32, 0.7);
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #5865F2;
+      --accent-glow: rgba(88, 101, 242, 0.25);
+      --text-main: #f2f3f5;
+      --text-muted: #949ba4;
+      --ok: #57F287;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Fondo con esferas brillantes decorativas */
+    .bg-glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 820px;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .bot-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #5865F2, #eb459e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+    }
+
+    .header-text h1 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .header-text p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(87, 242, 135, 0.1);
+      border: 1px solid rgba(87, 242, 135, 0.3);
+      color: var(--ok);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      color: var(--text-main);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 12px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 4px;
+      top: -2px;
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #ffb74d;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 20px; }
+      .header-text h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <main class="container">
+    <div class="header">
+      <div class="bot-icon">🛡️</div>
+      <div class="header-text">
+        <h1>Política de Privacidad de Seraph</h1>
+        <p>Transparencia, seguridad y protección de datos en Discord</p>
+      </div>
+    </div>
+
+    <div class="badge">
+      <span>✓</span> Actualizado para la Verificación de Desarrolladores de Discord
+    </div>
+
+    <section>
+      <h2>1. Introducción</h2>
+      <p>
+        El bot <strong>Seraph</strong> está diseñado para brindar seguridad, prevención de spam y sistemas de verificación Anti-Alt en comunidades de Discord. Respetamos tu privacidad y estamos comprometidos con la protección de los datos de los usuarios conforme a las Políticas para Desarrolladores y Términos del Servicio de Discord.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Información que Recopilamos</h2>
+      <p>Para operar el sistema de verificación y protección de servidores, Seraph procesa los siguientes datos técnicos:</p>
+      <ul>
+        <li><strong>Identificadores de Discord:</strong> ID de Usuario (<code>user_id</code>) e ID del Servidor (<code>guild_id</code>).</li>
+        <li><strong>Datos de Conexión Técnica:</strong> Dirección IP (analizada mediante APIs de reputación únicamente para detectar VPN, Proxies o Datacenters) e información del User-Agent del dispositivo.</li>
+        <li><strong>Huella Digital Técnica (Fingerprint):</strong> Hash anónimo generado a partir de parámetros técnicos del navegador para evitar la proliferación de cuentas secundarias en el servidor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Uso de la Información</h2>
+      <p>La información recopilada se utiliza de forma estricta y exclusiva para los siguientes fines:</p>
+      <ul>
+        <li>Validar la autenticidad del usuario e impedir el acceso de cuentas automatizadas o sospechosas.</li>
+        <li>Asignar y remover roles de acceso en Discord automáticamente al completar la verificación.</li>
+        <li>Permitir a los administradores del servidor auditar posibles evasiones de sanciones mediante comandos como <code>/alts</code> y <code>/status</code>.</li>
+      </ul>
+      <p><strong>Garantía de Privacidad:</strong> Seraph NO vende, NO alquila ni comparte datos con terceros para fines comerciales o publicitarios.</p>
+    </section>
+
+    <section>
+      <h2>4. Almacenamiento y Seguridad de Datos</h2>
+      <p>
+        Todos los datos se almacenan de forma segura en bases de datos con accesos restringidos y encriptados. Las fichas de verificación de la sesión web (tokens) expiran automáticamente en 30 minutos sin dejar rastros utilizables.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Eliminación de Datos y Derechos del Usuario</h2>
+      <p>
+        Cualquier usuario o administrador de un servidor puede solicitar la revocación y eliminación inmediata de sus registros de verificación utilizando el comando oficial de administración <code>/unverify</code> dentro de Discord o contactando directamente con el equipo de soporte.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Contacto y Soporte</h2>
+      <p>
+        Si tienes preguntas sobre esta Política de Privacidad o sobre el tratamiento de tus datos, puedes contactarnos a través del servidor oficial de soporte en Discord.
+      </p>
+    </section>
+
+    <div class="footer">
+      Seraph Bot System • Cumpliendo con la Política de Desarrolladores de Discord
+    </div>
+  </main>
+
+</body>
+</html>
